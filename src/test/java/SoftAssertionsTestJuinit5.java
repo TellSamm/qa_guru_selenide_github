@@ -21,6 +21,9 @@ public class SoftAssertionsTestJuinit5 {
     @Test
     void codeSearchJunit5(){
         $("div.f4.text-normal a[href='/selenide/selenide']").click();
+        $("#wiki-tab").click();
+        $("button[type='button']").scrollIntoView(".f6.Link--muted.js-wiki-more-pages-link.btn-link.mx-auto").click();
+
     }
 
 
