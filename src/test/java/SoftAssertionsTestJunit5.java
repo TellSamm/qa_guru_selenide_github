@@ -36,7 +36,7 @@ public class SoftAssertionsTestJunit5 {
         //$("div.f4.text-normal a[href='/selenide/selenide']").click();
         $("#wiki-tab").click(); //"div[class^='d-flex'] a[href$='SoftAssertions']"
         $("button[class$='mx-auto']").scrollTo().click();
-        $("a[href$='SoftAssertions']").shouldHave(text("SoftAssertions")).click();
+        $("span.Truncate a[href$='SoftAssertions']").shouldHave(text("SoftAssertions")).click();
         $("#user-content-3-using-junit5-extend-test-class").ancestor("h4").scrollTo().shouldHave(text("3. Using JUnit5 extend test class:"));
         String actualCode = $("#user-content-3-using-junit5-extend-test-class").ancestor("h4").sibling(0).scrollTo().getText();
 
