@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class SoftAssertionsTestJunit5 {
+public class SoftAssertionsGitHubTest {
     String expectedCode = "@ExtendWith({SoftAssertsExtension.class})\n" +
             "class Tests {\n" +
             "  @Test\n" +
@@ -20,7 +20,6 @@ public class SoftAssertionsTestJunit5 {
             "    $(\"#second\").should(visible).click();\n" +
             "  }\n" +
             "}";
-
     @BeforeAll
     static void openPracticeForm() {
         Configuration.browserSize = "1920x1080";
@@ -30,13 +29,11 @@ public class SoftAssertionsTestJunit5 {
 
     }
 
-
     @Test
     void codeSearchJunit5() {
-        //$("div.f4.text-normal a[href='/selenide/selenide']").click();
-        $("#wiki-tab").click(); //"div[class^='d-flex'] a[href$='SoftAssertions']"
+        $("#wiki-tab").click();
         $("button[class$='mx-auto']").scrollTo().click();
-        $("span.Truncate a[href$='SoftAssertions']").shouldHave(text("SoftAssertions")).click();
+        $("span[class^=T] a[href$='SoftAssertions']").shouldHave(text("SoftAssertions")).click();
         $("#user-content-3-using-junit5-extend-test-class").ancestor("h4").scrollTo().shouldHave(text("3. Using JUnit5 extend test class:"));
         String actualCode = $("#user-content-3-using-junit5-extend-test-class").ancestor("h4").sibling(0).scrollTo().getText();
 
