@@ -38,6 +38,7 @@ public class SoftAssertionsGitHubTest {
         String actualCode = $("#user-content-3-using-junit5-extend-test-class").ancestor("h4").sibling(0).scrollTo().getText();
 
         Assertions.assertEquals(expectedCode, actualCode);
+
     }
 
 
